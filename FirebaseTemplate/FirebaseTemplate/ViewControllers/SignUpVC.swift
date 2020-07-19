@@ -29,13 +29,13 @@ class SignUpVC: UIViewController {
         let conformPassword = conformPasswordField.text!
         let firstName = firstNameField.text!
         let lastName = lastNameField.text!
-        let phoneNumber = phoneNumberField.text!
+       // let phoneNumber = phoneNumberField.text!
         
         // You can use another User Struct as you wish
         let user = User(firstName: firstName,
                         lastName: lastName,
-                        email: email,
-                        phoneNumber: phoneNumber)
+                        email: email)
+                        //phoneNumber: phoneNumber)
 
         if validatePassword(password: password, conformPassword: conformPassword){
             Networking.signUp(user: user, password: password, success:  { uid in
